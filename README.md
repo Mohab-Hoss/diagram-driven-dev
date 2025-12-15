@@ -1,73 +1,138 @@
-# Welcome to your Lovable project
 
-## Project info
 
-**URL**: https://lovable.dev/projects/d1c59430-0ec8-4b23-a485-dabcea7a0ab0
+# 💊 PharmaCare – Pharmacy Management Web App
 
-## How can I edit this code?
+PharmaCare is a modern web application designed to simplify browsing, purchasing, and managing medicines online.
+The project focuses on a clean user experience, scalable architecture, and seamless integration with a backend service.
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 🚀 Features
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/d1c59430-0ec8-4b23-a485-dabcea7a0ab0) and start prompting.
+* 🔐 **User Authentication**
 
-Changes made via Lovable will be committed automatically to this repo.
+  * Sign up / Sign in
+  * Secure user sessions
 
-**Use your preferred IDE**
+* 💊 **Medicines Catalog**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+  * Browse medicines with images
+  * Search and filter by category
+  * Stock availability display
+  * Prescription-required indicator (Rx)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+* 🛒 **Shopping Cart**
 
-Follow these steps:
+  * Add medicines to cart
+  * Quantity management
+  * Prevent adding prescription-only medicines when required
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+* 👤 **User Profile**
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+  * View account information
+  * Update personal details (username, phone, address)
+  * View previous orders
 
-# Step 3: Install the necessary dependencies.
-npm i
+* 🖼 **Medicine Images**
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+  * Images stored and served via cloud storage
+  * Dynamic image rendering with fallback icons
+
+---
+
+## 🧱 Tech Stack
+
+This project is built using modern web technologies:
+
+* **Frontend**
+
+  * React
+  * TypeScript
+  * Vite
+  * Tailwind CSS
+  * shadcn/ui
+
+* **Backend & Services**
+
+  * Supabase (Database, Authentication, Storage)
+
+---
+
+## 📂 Project Structure (Simplified)
+
+```
+src/
+ ├── components/      # Reusable UI components
+ ├── pages/           # Application pages (Medicines, Profile, Auth, etc.)
+ ├── lib/             # Helpers & Supabase client
+ ├── types/           # TypeScript types
+ └── index.css        # Global styles
+```
+
+---
+
+## ⚙️ Getting Started (Local Development)
+
+### Prerequisites
+
+* Node.js (v18 or later)
+* npm
+
+### Installation
+
+```bash
+git clone <YOUR_GIT_REPOSITORY_URL>
+cd <PROJECT_FOLDER>
+npm install
+```
+
+### Run the App
+
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The application will be available at:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```
+http://localhost:5173
+```
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🗄 Database Overview
 
-## What technologies are used for this project?
+Main tables used in the project:
 
-This project is built with:
+* `users` – authenticated users
+* `medicines` – medicines data (price, stock, image, Rx status)
+* `categories` – medicine categories
+* `cart_items` – user cart data
+* `orders` – order history
+* `order_items` – medicines per order
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+---
 
-## How can I deploy this project?
+## 📸 Image Handling
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+* Medicine images are stored in cloud storage.
+* Each medicine record contains an `image_url`.
+* The UI automatically displays the image or a placeholder icon if unavailable.
 
-## Can I connect a custom domain to my Lovable project?
+---
 
-Yes, you can!
+## 📦 Deployment
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+The project is production-ready and can be deployed on any modern hosting platform that supports Vite-based React applications.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Build command:
+
+```bash
+npm run build
+```
+
+---
+
+
+
+قولّي و أظبطهولك فورًا 💪
